@@ -5,10 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Jesús Peña — Portfolio Data Analytics</title>
   <meta name="description" content="Portfolio de Jesús Peña: proyectos de Data Analytics con Tableau, Python y más." />
-  data:,
-
-  <!-- Tableau Embedding API v3 (ES6 module) -->
-  <script type="module" src="https://public.tableau.com/javascripts/api/tableau.embedding. <style>
+  <link rel="icon"
     :root { --maxw: 1100px; --muted:#5b6773; }
     * { box-sizing: border-box; }
     body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; background:#fafbfc; color:#111; }
@@ -24,7 +21,7 @@
     .card { background:#fff; border:1px solid #eef1f5; border-radius:14px; padding:14px; }
     .card h3 { margin:6px 6px 12px; font-size:18px; }
     .card p  { margin:0 6px 12px; color:var(--muted); font-size:14px; }
-    tableau-viz { display:block; width:100%; min-height: 900px; border:1px solid #eef1f5; border-radius:10px; overflow:hidden; }
+    iframe { width:100%; height: 900px; border:0; border-radius:10px; }
   </style>
 </head>
 <body>
@@ -41,17 +38,19 @@
 
       <div class="grid">
         <article class="card">
-          <h3>KPIs Netflix (Tableau)</h3>
+          <h3>KPIs Netflix (iframe)</h3>
           <p>Indicadores clave y desgloses por categoría.</p>
-          <tableau-viz
-            src="https://public.tableau.com/views/Netflix_17702282617750/Dashboard?:showVizHome=no"
-            toolbar="bottom"
-            hide-tabs
-            width="100%"
-            height="900px  <p>Distribución, métricas de RR. HH. y filtros interactivos.</p>
-          <tableau-viz
-            src="https://public.tableau.com/views/Empleados_17702317612790/Dashboard1?:showVizHome=no"
-            toolbar="bottom"
-            hide-tabs
-            width="100%"
-           
+          <iframe
+            src="https://public.tableau.com/views/Netflix_17702282617750/Dashboard?:showVizHome=no&:embed=y"
+           >
+
+        <article class="card">
+          <h3>Panel de Empleados (iframe)</h3>
+          <p>Distribución, métricas de RR. HH. y filtros interactivos.</p>
+          <iframe
+            src="https://public.tableau.com/views/Empleados_17702317612790/Dashboard1?:showVizHome=no&:embed=y"
+            loading</div>
+    </section>
+  </main>
+</body>
+</html>
