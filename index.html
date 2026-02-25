@@ -7,16 +7,14 @@
   <title>Jesús Peña — Data Analytics Portfolio</title>
   <meta name="description" content="Data Analytics portfolio featuring Tableau dashboards and data projects by Jesús Peña." />
 
-  <!-- Favicon (placeholder) -->
   <link rel="icon" href="data:," />
 
-  <!-- Open Graph / LinkedIn -->
+  <!-- Open Graph -->
   <meta property="og:title" content="Jesús Peña — Data Analytics Portfolio" />
   <meta property="og:description" content="Interactive Tableau dashboards and data-driven projects." />
   <meta property="og:image" content="https://jesuspenae.github.io/assets/og-cover.jpg" />
   <meta property="og:url" content="https://jesuspenae.github.io/" />
   <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Jesús Peña Portfolio" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
@@ -27,7 +25,7 @@
   <!-- Tableau Embedding API v3 -->
   <script type="module" src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.js"></script>
 
-  <!-- Structured Data (Schema.org Person) -->
+  <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -49,10 +47,7 @@
       --ink: #111;
     }
 
-    * {
-      box-sizing: border-box;
-    }
-
+    * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
@@ -60,10 +55,7 @@
       color: var(--ink);
     }
 
-    a {
-      color: #2947d3;
-      text-decoration: none;
-    }
+    a { color: #2947d3; text-decoration: none; }
 
     header {
       background: #fff;
@@ -73,11 +65,7 @@
       z-index: 10;
     }
 
-    .wrap {
-      max-width: var(--maxw);
-      margin: 0 auto;
-      padding: 16px;
-    }
+    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 16px; }
 
     .hero {
       padding: 24px 16px 0;
@@ -87,10 +75,7 @@
       align-items: baseline;
     }
 
-    h1 {
-      margin: 0;
-      font-size: clamp(22px, 4vw, 32px);
-    }
+    h1 { margin: 0; font-size: clamp(22px, 4vw, 32px); }
 
     .sub {
       margin: 0;
@@ -116,10 +101,7 @@
       padding: 0 16px 60px;
     }
 
-    h2 {
-      margin: 24px 0 12px;
-      font-size: clamp(18px, 3.2vw, 24px);
-    }
+    h2 { margin: 24px 0 12px; font-size: clamp(18px, 3.2vw, 24px); }
 
     .grid {
       display: grid;
@@ -128,9 +110,7 @@
     }
 
     @media (min-width: 880px) {
-      .grid {
-        grid-template-columns: 1fr 1fr;
-      }
+      .grid { grid-template-columns: 1fr 1fr; }
     }
 
     .card {
@@ -141,8 +121,14 @@
     }
 
     .card h3 {
-      margin: 6px 6px 8px;
+      margin: 6px 6px 4px;
       font-size: 18px;
+    }
+
+    .card .lang-note {
+      font-size: 12px;
+      color: var(--muted);
+      margin: 0 6px 12px;
     }
 
     .card p {
@@ -173,9 +159,7 @@
       align-items: center;
     }
 
-    footer small {
-      color: var(--muted);
-    }
+    footer small { color: var(--muted); }
   </style>
 </head>
 
@@ -183,13 +167,10 @@
   <header>
     <div class="wrap hero">
       <h1>Data Analytics Portfolio</h1>
-      <p class="sub">
-        Interactive Tableau dashboards and data-driven projects.
-      </p>
+      <p class="sub">Interactive Tableau dashboards and data-driven projects.</p>
       <p class="links">
         <a href="https://github.com/jesuspenae" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://public.tableau.com/app/profile/jes.s.pe.a5733" target="_blank" rel="noopener">Tableau Public</a>
-        <a href="mailto:tucorreo@ejemplo.com">Contact</a>
+        <a href="mailto:jesusmiguelpena@gmail.com">jesusmiguelpena@gmail.com</a>
       </p>
     </div>
   </header>
@@ -201,9 +182,8 @@
       <div class="grid">
         <article class="card">
           <h3>Netflix KPIs Dashboard</h3>
-          <p>
-            Key performance indicators with breakdowns by category and content type.
-          </p>
+          <p class="lang-note">Dashboard in English</p>
+          <p>Key performance indicators with breakdowns by category and content type.</p>
           <tableau-viz
             src="https://public.tableau.com/views/Netflix_17702282617750/Dashboard?:showVizHome=no"
             toolbar="bottom"
@@ -213,9 +193,8 @@
 
         <article class="card">
           <h3>Employee Analytics Dashboard</h3>
-          <p>
-            Workforce distribution, HR metrics, and interactive filters.
-          </p>
+          <p class="lang-note">Dashboard in Spanish / Tablero en español</p>
+          <p>Workforce distribution, HR metrics, and interactive filters.</p>
           <tableau-viz
             src="https://public.tableau.com/views/Empleados_17702317612790/Dashboard1?:showVizHome=no"
             toolbar="bottom"
