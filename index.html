@@ -3,19 +3,66 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Jesús Peña — Data Analytics Portfolio</title>
 
-  <meta name="description" content="Jesús Peña's Data Analytics portfolio featuring Tableau dashboards and data projects." />
+  <title>Jesús Peña — Data Analytics Portfolio</title>
+  <meta name="description" content="Data Analytics portfolio featuring Tableau dashboards and data projects by Jesús Peña." />
+
+  <!-- Favicon (placeholder) -->
+  <link rel="icon" href="data:," />
+
+  <!-- Open Graph / LinkedIn -->
+  <meta property="og:title" content="Jesús Peña — Data Analytics Portfolio" />
+  <meta property="og:description" content="Interactive Tableau dashboards and data-driven projects." />
+  <meta property="og:image" content="https://jesuspenae.github.io/assets/og-cover.jpg" />
+  <meta property="og:url" content="https://jesuspenae.github.io/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Jesús Peña Portfolio" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Jesús Peña — Data Analytics Portfolio" />
+  <meta name="twitter:description" content="Interactive Tableau dashboards and data-driven projects." />
+  <meta name="twitter:image" content="https://jesuspenae.github.io/assets/og-cover.jpg" />
+
+  <!-- Tableau Embedding API v3 -->
+  <script type="module" src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.js"></script>
+
+  <!-- Structured Data (Schema.org Person) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Jesús Peña",
+    "url": "https://jesuspenae.github.io/",
+    "jobTitle": "Junior Data Analyst",
+    "sameAs": [
+      "https://github.com/jesuspenae",
+      "https://public.tableau.com/app/profile/jes.s.pe.a5733"
+    ]
+  }
+  </script>
 
   <style>
-    :root { --maxw: 1100px; --muted:#5b6773; }
-    * { box-sizing: border-box; }
+    :root {
+      --maxw: 1100px;
+      --muted: #5b6773;
+      --ink: #111;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
 
     body {
       margin: 0;
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
       background: #fafbfc;
-      color: #111;
+      color: var(--ink);
+    }
+
+    a {
+      color: #2947d3;
+      text-decoration: none;
     }
 
     header {
@@ -34,16 +81,32 @@
 
     .hero {
       padding: 24px 16px 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: baseline;
     }
 
     h1 {
-      margin: 0 0 6px;
+      margin: 0;
       font-size: clamp(22px, 4vw, 32px);
     }
 
     .sub {
-      margin: 0 0 18px;
+      margin: 0;
       color: var(--muted);
+      font-size: 14px;
+      flex-basis: 100%;
+    }
+
+    .links a {
+      display: inline-block;
+      margin-right: 10px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: #eef3ff;
+      border: 1px solid #dfe7ff;
+      font-weight: 600;
       font-size: 14px;
     }
 
@@ -78,7 +141,7 @@
     }
 
     .card h3 {
-      margin: 6px 6px 12px;
+      margin: 6px 6px 8px;
       font-size: 18px;
     }
 
@@ -88,11 +151,30 @@
       font-size: 14px;
     }
 
-    iframe {
+    tableau-viz {
+      display: block;
       width: 100%;
-      height: 800px;
-      border: 0;
+      min-height: 900px;
+      border: 1px solid #eef1f5;
       border-radius: 10px;
+      overflow: hidden;
+    }
+
+    footer {
+      border-top: 1px solid #eef1f5;
+      background: #fff;
+    }
+
+    footer .wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    footer small {
+      color: var(--muted);
     }
   </style>
 </head>
@@ -102,7 +184,12 @@
     <div class="wrap hero">
       <h1>Data Analytics Portfolio</h1>
       <p class="sub">
-        Interactive dashboards built with Tableau and data-driven projects.
+        Interactive Tableau dashboards and data-driven projects.
+      </p>
+      <p class="links">
+        <a href="https://github.com/jesuspenae" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://public.tableau.com/app/profile/jes.s.pe.a5733" target="_blank" rel="noopener">Tableau Public</a>
+        <a href="mailto:tucorreo@ejemplo.com">Contact</a>
       </p>
     </div>
   </header>
@@ -117,24 +204,37 @@
           <p>
             Key performance indicators with breakdowns by category and content type.
           </p>
-          <iframe
-            src="https://public.tableau.com/views/Netflix_17702282617750/Dashboard?:showVizHome=no&:embed=true"
-            loading="lazy">
-          </iframe>
+          <tableau-viz
+            src="https://public.tableau.com/views/Netflix_17702282617750/Dashboard?:showVizHome=no"
+            toolbar="bottom"
+            hide-tabs>
+          </tableau-viz>
         </article>
 
         <article class="card">
-          <h3>Employee Analytics Dashboard (Spanish)</h3>
+          <h3>Employee Analytics Dashboard</h3>
           <p>
             Workforce distribution, HR metrics, and interactive filters.
           </p>
-          <iframe
-            src="https://public.tableau.com/views/Empleados_17702317612790/Dashboard1?:showVizHome=no&:embed=true"
-            loading="lazy">
-          </iframe>
+          <tableau-viz
+            src="https://public.tableau.com/views/Empleados_17702317612790/Dashboard1?:showVizHome=no"
+            toolbar="bottom"
+            hide-tabs>
+          </tableau-viz>
         </article>
       </div>
     </section>
   </main>
+
+  <footer>
+    <div class="wrap">
+      <small>© Jesús Peña</small>
+      <small>
+        <a href="https://github.com/jesuspenae/jesuspenae.github.io" target="_blank" rel="noopener">
+          View source code
+        </a>
+      </small>
+    </div>
+  </footer>
 </body>
 </html>
