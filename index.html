@@ -156,6 +156,29 @@
       margin: 0 auto;
     }
 
+    /* Badges */
+    .badge-powerbi {
+      display: inline-block;
+      background: #f2c811;
+      color: #000;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 10px;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .badge-tableau {
+      display: inline-block;
+      background: #1f77b4;
+      color: #fff;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 10px;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
     footer {
       border-top: 1px solid #eef1f5;
       background: #fff;
@@ -192,6 +215,7 @@
 
       <div class="grid">
         <article class="card">
+          <div class="badge-tableau">TABLEAU</div>
           <h3>Netflix KPIs Dashboard</h3>
           <p>Key performance indicators and insights on content performance and category trends.</p>
           <tableau-viz
@@ -202,6 +226,7 @@
         </article>
 
         <article class="card">
+          <div class="badge-tableau">TABLEAU</div>
           <h3>Employee Analytics Dashboard</h3>
           <p class="lang-note">Dashboard in Spanish</p>
           <p>HR metrics, workforce distribution, and interactive filters for organizational insights.</p>
@@ -216,7 +241,7 @@
     <section>
       <div class="grid">
         <article class="card">
-          <div style="display: inline-block; background: #f2c811; color: #000; padding: 2px 8px; border-radius: 4px; font-size: 10px; font-weight: bold; margin-bottom: 8px;">POWER BI</div>
+          <div class="badge-powerbi">POWER BI</div>
           <h3>Workforce Analytics Dashboard</h3>
           <p class="lang-note">Dashboard in Spanish</p>
           <p>Comprehensive HR analysis using DAX for data processing and workforce distribution mapping.</p>
