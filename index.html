@@ -32,7 +32,7 @@
     "@type": "Person",
     "name": "Jesús Peña",
     "url": "https://jesuspenae.github.io/",
-    "jobTitle": "Junior Data Analyst",
+    "jobTitle": "Data Analyst",
     "sameAs": [
       "https://github.com/jesuspenae",
       "https://www.linkedin.com/in/jesusmiguelpena",
@@ -111,6 +111,44 @@
 
     h2 { margin: 24px 0 12px; font-size: clamp(18px, 3.2vw, 24px); }
 
+    /* Bio */
+    .bio {
+      background: #fff;
+      border: 1px solid #eef1f5;
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin-bottom: 8px;
+    }
+
+    .bio p {
+      margin: 0 0 10px;
+      font-size: 15px;
+      line-height: 1.75;
+      color: var(--muted);
+    }
+
+    .bio p:last-child { margin-bottom: 0; }
+
+    .bio strong { color: var(--ink); }
+
+    .skills-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .skill-tag {
+      background: #eef3ff;
+      border: 1px solid #dfe7ff;
+      color: #2947d3;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 999px;
+    }
+
+    /* Grid & Cards */
     .grid {
       display: grid;
       gap: 16px;
@@ -131,10 +169,7 @@
       flex-direction: column;
     }
 
-    .card h3 {
-      margin: 6px 6px 4px;
-      font-size: 18px;
-    }
+    .card h3 { margin: 6px 6px 4px; font-size: 18px; }
 
     .card .lang-note {
       font-size: 12px;
@@ -203,7 +238,7 @@
   <header>
     <div class="wrap hero">
       <h1>Data Analytics Portfolio</h1>
-      <p class="sub">Interactive Tableau dashboards and data-driven projects.</p>
+      <p class="sub">Turning real-world business data into clear decisions.</p>
       <p class="links">
         <a href="https://github.com/jesuspenae" target="_blank" rel="noopener">GitHub</a>
         <a href="https://www.linkedin.com/in/jesusmiguelpena" target="_blank" rel="noopener">LinkedIn</a>
@@ -213,6 +248,23 @@
   </header>
 
   <main class="wrap">
+
+    <!-- BIO -->
+    <section class="bio">
+      <p>
+        Data Analyst transitioning from a decade of business operations — with real-world experience 
+        analyzing KPIs, SLAs, and financial data across legal, mortgage, and fintech environments. 
+        I don't just build dashboards; I understand the business decisions behind them.
+      </p>
+      <p>
+        Holding an MBA, a Master's in Project Management, and currently completing a 
+        Bootcamp in Data Analytics (Neoland, 2026). Certified in 
+        Microsoft Azure Data Fundamentals (DP-900) and PMI Project Management Ready™.
+      </p>
+
+    </section>
+
+    <!-- PROJECTS -->
     <section>
       <h2>Featured Projects</h2>
 
@@ -258,6 +310,7 @@
         </article>
       </div>
     </section>
+
   </main>
 
   <footer>
