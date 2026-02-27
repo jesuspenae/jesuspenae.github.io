@@ -187,7 +187,7 @@
   </header>
 
   <main class="wrap">
-   <section>
+  <section>
   <h2>Featured Projects</h2>
   <div class="grid">
     
@@ -195,18 +195,19 @@
       <div style="display: inline-block; background: #00758f; color: #fff; padding: 2px 8px; border-radius: 4px; font-size: 10px; font-weight: bold; margin-bottom: 8px;">TABLEAU</div>
       <h3>Netflix KPIs Dashboard</h3>
       <p>Key performance indicators and insights on content performance and category trends.</p>
-      <a href="LINK_A_TU_DASHBOARD_1" target="_blank">
-        <img src="URL_DE_TU_IMAGEN_NETFLIX" alt="Netflix Dashboard" style="width: 100%; border-radius: 10px; border: 1px solid #eef1f5;">
-      </a>
+      <div class="tableau-container">
+        <script type="module" src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js"></script>
+        <tableau-viz id="tableauViz1" src="https://public.tableau.com/views/NetflixDashboard_17399104803730/Dashboard1" device="phone" toolbar="bottom" hide-tabs></tableau-viz>
+      </div>
     </article>
 
     <article class="card">
       <div style="display: inline-block; background: #00758f; color: #fff; padding: 2px 8px; border-radius: 4px; font-size: 10px; font-weight: bold; margin-bottom: 8px;">TABLEAU</div>
       <h3>Employee Analytics Dashboard</h3>
       <p>HR metrics, workforce distribution, and interactive filters for organizational insights.</p>
-      <a href="LINK_A_TU_DASHBOARD_2" target="_blank">
-        <img src="URL_DE_TU_IMAGEN_EMPLOYEE" alt="Employee Dashboard" style="width: 100%; border-radius: 10px; border: 1px solid #eef1f5;">
-      </a>
+      <div class="tableau-container">
+        <tableau-viz id="tableauViz2" src="https://public.tableau.com/views/HRDashboard_17399220037380/Dashboard1" device="phone" toolbar="bottom" hide-tabs></tableau-viz>
+      </div>
     </article>
 
     <article class="card">
@@ -214,10 +215,10 @@
       <h3>Workforce Analytics Dashboard</h3>
       <p>Comprehensive HR analysis using DAX for data processing and workforce distribution mapping.</p>
       <a href="https://github.com/jesuspenae/powerbi-rrhh-analysis" target="_blank">
-        <img src="dashboard-rrhh-pbi.png" alt="Power BI HR Dashboard" style="width: 100%; border-radius: 10px; border: 1px solid #eef1f5;">
+        <img src="dashboard-rrhh-pbi.png" alt="Power BI HR Dashboard" style="width: 100%; border-radius: 10px; border: 1px solid #eef1f5; margin-top: 10px;">
       </a>
       <p style="margin-top: 12px; font-size: 13px;">
-        <a href="https://github.com/jesuspenae/powerbi-rrhh-analysis" target="_blank">📂 View DAX formulas & source files →</a>
+        <a href="https://github.com/jesuspenae/powerbi-rrhh-analysis" target="_blank" style="text-decoration: none;">📂 View DAX formulas & source files →</a>
       </p>
     </article>
 
