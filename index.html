@@ -1,241 +1,229 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Jesús Peña — Data Analytics Portfolio</title>
-  <meta name="description" content="Data Analytics portfolio featuring Tableau dashboards and data projects by Jesús Peña." />
+  <title>Jesús Peña — Data Analytics Portfolio</title>
+  <meta name="description" content="Data Analytics portfolio featuring Tableau dashboards and data projects by Jesús Peña." />
 
-  <link rel="icon" href="/assets/favicon.png" />
+  <link rel="icon" href="/assets/favicon.png" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Jesús Peña — Data Analytics Portfolio" />
-  <meta property="og:description" content="Interactive Tableau dashboards and data-driven projects." />
-  <meta property="og:image" content="https://jesuspenae.github.io/assets/og-cover.jpg" />
-  <meta property="og:url" content="https://jesuspenae.github.io/" />
-  <meta property="og:type" content="website" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Jesús Peña — Data Analytics Portfolio" />
+  <meta property="og:description" content="Interactive Tableau dashboards and data-driven projects." />
+  <meta property="og:image" content="https://jesuspenae.github.io/assets/og-cover.jpg" />
+  <meta property="og:url" content="https://jesuspenae.github.io/" />
+  <meta property="og:type" content="website" />
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Jesús Peña — Data Analytics Portfolio" />
-  <meta name="twitter:description" content="Interactive Tableau dashboards and data-driven projects." />
-  <meta name="twitter:image" content="https://jesuspenae.github.io/assets/og-cover.jpg" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Jesús Peña — Data Analytics Portfolio" />
+  <meta name="twitter:description" content="Interactive Tableau dashboards and data-driven projects." />
+  <meta name="twitter:image" content="https://jesuspenae.github.io/assets/og-cover.jpg" />
 
-  <!-- Tableau Embedding API v3 -->
-  <script type="module" src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.js"></script>
+  <!-- Tableau Embedding API v3 -->
+  <script type="module" src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.js"></script>
 
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Jesús Peña",
-    "url": "https://jesuspenae.github.io/",
-    "jobTitle": "Junior Data Analyst",
-    "sameAs": [
-      "https://github.com/jesuspenae",
-      "https://www.linkedin.com/in/jesusmiguelpena",
-      "https://public.tableau.com/app/profile/jes.s.pe.a5733"
-    ]
-  }
-  </script>
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Jesús Peña",
+    "url": "https://jesuspenae.github.io/",
+    "jobTitle": "Junior Data Analyst",
+    "sameAs": [
+      "https://github.com/jesuspenae",
+      "https://www.linkedin.com/in/jesusmiguelpena",
+      "https://public.tableau.com/app/profile/jes.s.pe.a5733"
+    ]
+  }
+  </script>
 
-  <style>
-    :root {
-      --maxw: 1100px;
-      --muted: #5b6773;
-      --ink: #111;
-    }
+  <style>
+    :root {
+      --maxw: 1100px;
+      --muted: #5b6773;
+      --ink: #111;
+    }
 
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-      background: #fafbfc;
-      color: var(--ink);
-    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      background: #fafbfc;
+      color: var(--ink);
+    }
 
-    a { color: #2947d3; text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    a { color: #2947d3; text-decoration: none; }
+    a:hover { text-decoration: underline; }
 
-    header {
-      background: #fff;
-      border-bottom: 1px solid #eef1f5;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
+    header {
+      background: #fff;
+      border-bottom: 1px solid #eef1f5;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
 
-    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 16px; }
+    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 16px; }
 
-    .hero {
-      padding: 24px 16px 0;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      align-items: baseline;
-    }
+    .hero {
+      padding: 24px 16px 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: baseline;
+    }
 
-    h1 { margin: 0; font-size: clamp(22px, 4vw, 32px); }
+    h1 { margin: 0; font-size: clamp(22px, 4vw, 32px); }
 
-    .sub {
-      margin: 0;
-      color: var(--muted);
-      font-size: 14px;
-      flex-basis: 100%;
-    }
+    .sub {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      flex-basis: 100%;
+    }
 
-    .links a {
-      display: inline-block;
-      margin-right: 10px;
-      padding: 6px 12px;
-      border-radius: 999px;
-      background: #eef3ff;
-      border: 1px solid #dfe7ff;
-      font-weight: 600;
-      font-size: 14px;
-      transition: 0.3s;
-    }
+    .links a {
+      display: inline-block;
+      margin-right: 10px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: #eef3ff;
+      border: 1px solid #dfe7ff;
+      font-weight: 600;
+      font-size: 14px;
+      transition: 0.3s;
+    }
 
-    .links a:hover {
-      background: #2947d3;
-      color: #fff;
-    }
+    .links a:hover {
+      background: #2947d3;
+      color: #fff;
+    }
 
-    main {
-      max-width: var(--maxw);
-      margin: 20px auto;
-      padding: 0 16px 60px;
-    }
+    main {
+      max-width: var(--maxw);
+      margin: 20px auto;
+      padding: 0 16px 60px;
+    }
 
-    h2 { margin: 24px 0 12px; font-size: clamp(18px, 3.2vw, 24px); }
+    h2 { margin: 24px 0 12px; font-size: clamp(18px, 3.2vw, 24px); }
 
-    .grid {
-      display: grid;
-      gap: 16px;
-      grid-template-columns: 1fr;
-    }
+    .grid {
+      display: grid;
+      gap: 16px;
+      grid-template-columns: 1fr;
+    }
 
-    @media (min-width: 880px) {
-      .grid { grid-template-columns: 1fr 1fr; }
-    }
+    @media (min-width: 880px) {
+      .grid { grid-template-columns: 1fr 1fr; }
+    }
 
-    .card {
-      background: #fff;
-      border: 1px solid #eef1f5;
-      border-radius: 14px;
-      padding: 14px;
-    }
+    .card {
+      background: #fff;
+      border: 1px solid #eef1f5;
+      border-radius: 14px;
+      padding: 14px;
+    }
 
-    .card h3 {
-      margin: 6px 6px 4px;
-      font-size: 18px;
-    }
+    .card h3 {
+      margin: 6px 6px 4px;
+      font-size: 18px;
+    }
 
-    .card .lang-note {
-      font-size: 12px;
-      color: var(--muted);
-      margin: 0 6px 12px;
-    }
+    .card .lang-note {
+      font-size: 12px;
+      color: var(--muted);
+      margin: 0 6px 12px;
+    }
 
-    .card p {
-      margin: 0 6px 12px;
-      color: var(--muted);
-      font-size: 14px;
-    }
+    .card p {
+      margin: 0 6px 12px;
+      color: var(--muted);
+      font-size: 14px;
+    }
 
-    tableau-viz {
-      display: block;
-      width: 100%;
-      max-width: 1100px;
-      min-height: 700px;
-      border: 1px solid #eef1f5;
-      border-radius: 10px;
-      overflow: hidden;
-      margin: 0 auto;
-    }
+    tableau-viz {
+      display: block;
+      width: 100%;
+      max-width: 1100px;
+      min-height: 700px;
+      border: 1px solid #eef1f5;
+      border-radius: 10px;
+      overflow: hidden;
+      margin: 0 auto;
+    }
 
-    footer {
-      border-top: 1px solid #eef1f5;
-      background: #fff;
-    }
+    footer {
+      border-top: 1px solid #eef1f5;
+      background: #fff;
+    }
 
-    footer .wrap {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      justify-content: space-between;
-      align-items: center;
-    }
+    footer .wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-    footer small { color: var(--muted); }
-  </style>
+    footer small { color: var(--muted); }
+  </style>
 </head>
 
 <body>
-  <header>
-    <div class="wrap hero">
-      <h1>Data Analytics Portfolio</h1>
-      <p class="sub">Interactive Tableau dashboards and data-driven projects.</p>
-      <p class="links">
-        <a href="https://github.com/jesuspenae" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://www.linkedin.com/in/jesusmiguelpena" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="mailto:jesusmiguelpena@gmail.com">Contact</a>
-      </p>
-    </div>
-  </header>
+  <header>
+    <div class="wrap hero">
+      <h1>Data Analytics Portfolio</h1>
+      <p class="sub">Interactive Tableau dashboards and data-driven projects.</p>
+      <p class="links">
+        <a href="https://github.com/jesuspenae" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/jesusmiguelpena" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:jesusmiguelpena@gmail.com">Contact</a>
+      </p>
+    </div>
+  </header>
 
-  <main class="wrap">
-<section>
-      <h2>Featured Projects (Tableau)</h2>
-      <ul>
-        <li>
-          <strong>Netflix KPIs Dashboard</strong><br>
-          Key performance indicators and insights on content performance and category trends.<br>
-          <a href="https://public.tableau.com/app/profile/jes.s.pe.a5733/viz/Netflix_17702282617750/Dashboard" target="_blank">View Dashboard</a>
-          <div class="tableau-container">
-            <script type="module" src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js"></script>
-            <tableau-viz id="tableauViz1" src="https://public.tableau.com/views/Netflix_17702282617750/Dashboard" device="phone" toolbar="bottom" hide-tabs></tableau-viz>
-          </div>
-        </li>
-        <li>
-          <strong>Employee Analytics Dashboard</strong> (Dashboard in Spanish / Tablero en español)<br>
-          HR metrics, workforce distribution, and interactive filters for organizational insights.<br>
-          <a href="https://public.tableau.com/app/profile/jes.s.pe.a5733/viz/Empleados_17702317612790/Dashboard1" target="_blank">View Dashboard</a>
-          <div class="tableau-container">
-            <tableau-viz id="tableauViz2" src="https://public.tableau.com/views/Empleados_17702317612790/Dashboard1" device="phone" toolbar="bottom" hide-tabs></tableau-viz>
-          </div>
-        </li>
-      </ul>
-    </section>
+  <main class="wrap">
+    <section>
+      <h2>Featured Projects (Tableau)</h2>
 
-    <section>
-      <h2>Featured Projects (Power BI)</h2>
-      <ul>
-        <li>
-          <strong>Workforce Analytics Dashboard</strong><br>
-          Comprehensive HR analysis using DAX for data processing and workforce distribution mapping.<br>
-          <a href="https://github.com/jesuspenae/powerbi-rrhh-analysis" target="_blank">View Project & Source Files</a>
-          <div style="margin-top: 15px;">
-            <a href="https://github.com/jesuspenae/powerbi-rrhh-analysis" target="_blank">
-              <img src="dashboard-rrhh-pbi.png" alt="Power BI HR Dashboard" style="width: 100%; max-width: 600px; border-radius: 8px; border: 1px solid #ddd;">
-            </a>
-          </div>
-        </li>
-      </ul>
-    </section>
-  </main>
+      <div class="grid">
+        <article class="card">
+          <h3>Netflix KPIs Dashboard</h3>
+          <p>Key performance indicators and insights on content performance and category trends.</p>
+          <tableau-viz
+            src="https://public.tableau.com/views/Netflix_17702282617750/Dashboard?:showVizHome=no"
+            toolbar="bottom"
+            hide-tabs>
+          </tableau-viz>
+        </article>
 
-  <footer>
-    <div class="wrap">
-      <small>© Jesús Peña</small>
-      <small>
-        <a href="https://github.com/jesuspenae/jesuspenae.github.io" target="_blank" rel="noopener">
-          View source code
-        </a>
-      </small>
-    </div>
-  </footer>
+        <article class="card">
+          <h3>Employee Analytics Dashboard</h3>
+          <p class="lang-note">Dashboard in Spanish / Tablero en español</p>
+          <p>HR metrics, workforce distribution, and interactive filters for organizational insights.</p>
+          <tableau-viz
+            src="https://public.tableau.com/views/Empleados_17702317612790/Dashboard1?:showVizHome=no"
+            toolbar="bottom"
+            hide-tabs>
+          </tableau-viz>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <small>© Jesús Peña</small>
+      <small>
+        <a href="https://github.com/jesuspenae/jesuspenae.github.io" target="_blank" rel="noopener">
+          View source code
+        </a>
+      </small>
+    </div>
+  </footer>
 </body>
 </html>
