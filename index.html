@@ -3,70 +3,203 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Opción 3 — Auto-stretch CSS</title>
+
+  <title>Jesús Peña — Data Analytics Portfolio</title>
+  <meta name="description" content="Data Analytics portfolio featuring Tableau dashboards and data projects by Jesús Peña." />
+
+  <link rel="icon" href="/assets/favicon.png" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Jesús Peña — Data Analytics Portfolio" />
+  <meta property="og:description" content="Interactive Tableau dashboards and data-driven projects." />
+  <meta property="og:image" content="https://jesuspenae.github.io/assets/og-cover.jpg" />
+  <meta property="og:url" content="https://jesuspenae.github.io/" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Jesús Peña — Data Analytics Portfolio" />
+  <meta name="twitter:description" content="Interactive Tableau dashboards and data-driven projects." />
+  <meta name="twitter:image" content="https://jesuspenae.github.io/assets/og-cover.jpg" />
+
+  <!-- Tableau Embedding API v3 -->
   <script type="module" src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.js"></script>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Jesús Peña",
+    "url": "https://jesuspenae.github.io/",
+    "jobTitle": "Junior Data Analyst",
+    "sameAs": [
+      "https://github.com/jesuspenae",
+      "https://www.linkedin.com/in/jesusmiguelpena",
+      "https://public.tableau.com/app/profile/jes.s.pe.a5733"
+    ]
+  }
+  </script>
+
   <style>
-    :root { --maxw: 1100px; --muted: #5b6773; --ink: #111; }
+    :root {
+      --maxw: 1100px;
+      --muted: #5b6773;
+      --ink: #111;
+    }
+
     * { box-sizing: border-box; }
-    body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; background: #fafbfc; color: var(--ink); }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      background: #fafbfc;
+      color: var(--ink);
+    }
+
     a { color: #2947d3; text-decoration: none; }
     a:hover { text-decoration: underline; }
-    header { background: #fff; border-bottom: 1px solid #eef1f5; position: sticky; top: 0; z-index: 10; }
+
+    header {
+      background: #fff;
+      border-bottom: 1px solid #eef1f5;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
     .wrap { max-width: var(--maxw); margin: 0 auto; padding: 16px; }
-    .hero { padding: 24px 16px 0; display: flex; flex-wrap: wrap; gap: 12px; align-items: baseline; }
+
+    .hero {
+      padding: 24px 16px 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: baseline;
+    }
+
     h1 { margin: 0; font-size: clamp(22px, 4vw, 32px); }
-    .sub { margin: 0; color: var(--muted); font-size: 14px; flex-basis: 100%; }
-    .links a { display: inline-block; margin-right: 10px; padding: 6px 12px; border-radius: 999px; background: #eef3ff; border: 1px solid #dfe7ff; font-weight: 600; font-size: 14px; transition: 0.3s; }
-    .links a:hover { background: #2947d3; color: #fff; }
-    main { max-width: var(--maxw); margin: 20px auto; padding: 0 16px 60px; }
+
+    .sub {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      flex-basis: 100%;
+    }
+
+    .links a {
+      display: inline-block;
+      margin-right: 10px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: #eef3ff;
+      border: 1px solid #dfe7ff;
+      font-weight: 600;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    .links a:hover {
+      background: #2947d3;
+      color: #fff;
+    }
+
+    main {
+      max-width: var(--maxw);
+      margin: 20px auto;
+      padding: 0 16px 60px;
+    }
+
     h2 { margin: 24px 0 12px; font-size: clamp(18px, 3.2vw, 24px); }
 
-    /* ✅ OPCIÓN 3: Grid con align-items stretch — las cards se igualan automáticamente */
     .grid {
       display: grid;
       gap: 16px;
       grid-template-columns: 1fr;
-      align-items: stretch; /* ← clave */
+      align-items: stretch;
     }
-    @media (min-width: 880px) { .grid { grid-template-columns: 1fr 1fr; } }
+
+    @media (min-width: 880px) {
+      .grid { grid-template-columns: 1fr 1fr; }
+    }
 
     .card {
       background: #fff;
       border: 1px solid #eef1f5;
       border-radius: 14px;
       padding: 14px;
-      display: flex;           /* ← card como flex container */
-      flex-direction: column;  /* ← apila los hijos verticalmente */
+      display: flex;
+      flex-direction: column;
     }
 
-    .card h3 { margin: 6px 6px 4px; font-size: 18px; }
-    .card .lang-note { font-size: 12px; color: var(--muted); margin: 0 6px 12px; }
-    .card p { margin: 0 6px 12px; color: var(--muted); font-size: 14px; }
+    .card h3 {
+      margin: 6px 6px 4px;
+      font-size: 18px;
+    }
 
-    /* tableau-viz ocupa todo el espacio disponible restante */
+    .card .lang-note {
+      font-size: 12px;
+      color: var(--muted);
+      margin: 0 6px 12px;
+    }
+
+    .card p {
+      margin: 0 6px 12px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
     tableau-viz {
       display: block;
       width: 100%;
-      flex: 1;                 /* ← se expande para llenar la card */
+      flex: 1;
       min-height: 600px;
       border: 1px solid #eef1f5;
       border-radius: 10px;
       overflow: hidden;
     }
 
-    .badge-powerbi { display: inline-block; background: #f2c811; color: #000; padding: 2px 8px; border-radius: 4px; font-size: 10px; font-weight: bold; margin-bottom: 8px; align-self: flex-start; }
-    .badge-tableau { display: inline-block; background: #1f77b4; color: #fff; padding: 2px 8px; border-radius: 4px; font-size: 10px; font-weight: bold; margin-bottom: 8px; align-self: flex-start; }
+    .badge-powerbi {
+      display: inline-block;
+      background: #f2c811;
+      color: #000;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 10px;
+      font-weight: bold;
+      margin-bottom: 8px;
+      align-self: flex-start;
+    }
 
-    .option-banner { background: #2947d3; color: #fff; text-align: center; padding: 10px; font-weight: bold; font-size: 14px; }
+    .badge-tableau {
+      display: inline-block;
+      background: #1f77b4;
+      color: #fff;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 10px;
+      font-weight: bold;
+      margin-bottom: 8px;
+      align-self: flex-start;
+    }
 
-    footer { border-top: 1px solid #eef1f5; background: #fff; }
-    footer .wrap { display: flex; flex-wrap: wrap; gap: 8px; justify-content: space-between; align-items: center; }
+    footer {
+      border-top: 1px solid #eef1f5;
+      background: #fff;
+    }
+
+    footer .wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: space-between;
+      align-items: center;
+    }
+
     footer small { color: var(--muted); }
   </style>
 </head>
-<body>
-  <div class="option-banner">⚙️ OPCIÓN 3 — Cards se igualan automáticamente con CSS flex + stretch (recomendada)</div>
 
+<body>
   <header>
     <div class="wrap hero">
       <h1>Data Analytics Portfolio</h1>
@@ -74,20 +207,25 @@
       <p class="links">
         <a href="https://github.com/jesuspenae" target="_blank" rel="noopener">GitHub</a>
         <a href="https://www.linkedin.com/in/jesusmiguelpena" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="/cdn-cgi/l/email-protection#d5bfb0a6a0a6b8bcb2a0b0b9a5b0bbb495b2b8b4bcb9fbb6bab8">Contact</a>
+        <a href="mailto:jesusmiguelpena@gmail.com">Contact</a>
       </p>
     </div>
   </header>
 
   <main class="wrap">
     <section>
-      <h2>Featured Projects (Tableau)</h2>
+      <h2>Featured Projects</h2>
+
       <div class="grid">
         <article class="card">
           <div class="badge-tableau">TABLEAU</div>
           <h3>Netflix KPIs Dashboard</h3>
           <p>Key performance indicators and insights on content performance and category trends.</p>
-          <tableau-viz src="https://public.tableau.com/views/Netflix_17702282617750/Dashboard?:showVizHome=no" toolbar="bottom" hide-tabs></tableau-viz>
+          <tableau-viz
+            src="https://public.tableau.com/views/Netflix_17702282617750/Dashboard?:showVizHome=no"
+            toolbar="bottom"
+            hide-tabs>
+          </tableau-viz>
         </article>
 
         <article class="card">
@@ -95,7 +233,11 @@
           <h3>Employee Analytics Dashboard</h3>
           <p class="lang-note">Dashboard in Spanish</p>
           <p>HR metrics, workforce distribution, and interactive filters for organizational insights.</p>
-          <tableau-viz src="https://public.tableau.com/views/Empleados_17702317612790/Dashboard1?:showVizHome=no" toolbar="bottom" hide-tabs></tableau-viz>
+          <tableau-viz
+            src="https://public.tableau.com/views/Empleados_17702317612790/Dashboard1?:showVizHome=no"
+            toolbar="bottom"
+            hide-tabs>
+          </tableau-viz>
         </article>
       </div>
     </section>
@@ -121,4 +263,12 @@
   <footer>
     <div class="wrap">
       <small>© Jesús Peña</small>
-      <small><a href="https://github.com/jesuspenae/jesuspenae.github.io" target="_blank" rel="noopener">View source code</a>
+      <small>
+        <a href="https://github.com/jesuspenae/jesuspenae.github.io" target="_blank" rel="noopener">
+          View source code
+        </a>
+      </small>
+    </div>
+  </footer>
+</body>
+</html>
