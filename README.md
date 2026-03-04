@@ -1,13 +1,10 @@
 # Jesús Peña — Data Analytics Portfolio
-
-Welcome to my Data Analytics portfolio! This repository hosts my interactive **Tableau** and **Power BI** dashboards and data-driven projects.
+Welcome to my Data Analytics portfolio! This repository hosts my interactive **Tableau**, **Power BI**, and **Google Sheets** dashboards and data-driven projects.
 
 ## 🌐 Live Website
-
 [https://jesuspenae.github.io/](https://jesuspenae.github.io/)
 
 ## 📊 Featured Projects
-
 - **Netflix KPIs Dashboard** *(Tableau)*
   Key performance indicators and insights on content performance and category trends.
   [View Dashboard](https://public.tableau.com/views/Netflix_17702282617750/Dashboard)
@@ -20,8 +17,11 @@ Welcome to my Data Analytics portfolio! This repository hosts my interactive **T
   Comprehensive HR analysis using DAX for data processing and workforce distribution mapping.
   [View Project & Source Files](https://github.com/jesuspenae/powerbi-rrhh-analysis)
 
-## 📬 Contact
+- **Global Sales Analysis** *(Google Sheets)*
+  Sales data analysis across 12 product categories, 47 countries, and 8 years — including ABC Analysis, geographic trends, and product performance.
+  [View Project & Source Files](https://github.com/jesuspenae/global-sales-analysis)
 
+## 📬 Contact
 - Email: [jesusmiguelpena@gmail.com](mailto:jesusmiguelpena@gmail.com)
 - LinkedIn: [linkedin.com/in/jesusmiguelpena](https://www.linkedin.com/in/jesusmiguelpena)
 - GitHub: [github.com/jesuspenae](https://github.com/jesuspenae)
