@@ -3,29 +3,19 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
   <title>Jesús Peña — Data Analytics Portfolio</title>
   <meta name="description" content="Data Analytics portfolio featuring Tableau dashboards and data projects by Jesús Peña." />
-
   <link rel="icon" href="/assets/favicon.png" />
-
-  <!-- Open Graph -->
   <meta property="og:title" content="Jesús Peña — Data Analytics Portfolio" />
   <meta property="og:description" content="Interactive Tableau dashboards and data-driven projects." />
   <meta property="og:image" content="https://jesuspenae.github.io/assets/og-cover.jpg" />
   <meta property="og:url" content="https://jesuspenae.github.io/" />
   <meta property="og:type" content="website" />
-
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Jesús Peña — Data Analytics Portfolio" />
   <meta name="twitter:description" content="Interactive Tableau dashboards and data-driven projects." />
   <meta name="twitter:image" content="https://jesuspenae.github.io/assets/og-cover.jpg" />
-
-  <!-- Tableau Embedding API v3 -->
   <script type="module" src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.js"></script>
-
-  <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -40,191 +30,39 @@
     ]
   }
   </script>
-
   <style>
-    :root {
-      --maxw: 1100px;
-      --muted: #5b6773;
-      --ink: #111;
-    }
-
+    :root { --maxw: 1100px; --muted: #5b6773; --ink: #111; }
     * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-      background: #fafbfc;
-      color: var(--ink);
-    }
-
+    body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; background: #fafbfc; color: var(--ink); }
     a { color: #2947d3; text-decoration: none; }
     a:hover { text-decoration: underline; }
-
-    header {
-      background: #fff;
-      border-bottom: 1px solid #eef1f5;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-
+    header { background: #fff; border-bottom: 1px solid #eef1f5; position: sticky; top: 0; z-index: 10; }
     .wrap { max-width: var(--maxw); margin: 0 auto; padding: 16px; }
-
-    .hero {
-      padding: 24px 16px 0;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      align-items: baseline;
-    }
-
+    .hero { padding: 24px 16px 0; display: flex; flex-wrap: wrap; gap: 12px; align-items: baseline; }
     h1 { margin: 0; font-size: clamp(22px, 4vw, 32px); }
-
-    .sub {
-      margin: 0;
-      color: var(--muted);
-      font-size: 14px;
-      flex-basis: 100%;
-    }
-
-    .links a {
-      display: inline-block;
-      margin-right: 10px;
-      padding: 6px 12px;
-      border-radius: 999px;
-      background: #eef3ff;
-      border: 1px solid #dfe7ff;
-      font-weight: 600;
-      font-size: 14px;
-      transition: 0.3s;
-    }
-
-    .links a:hover {
-      background: #2947d3;
-      color: #fff;
-    }
-
-    main {
-      max-width: var(--maxw);
-      margin: 20px auto;
-      padding: 0 16px 60px;
-    }
-
+    .sub { margin: 0; color: var(--muted); font-size: 14px; flex-basis: 100%; }
+    .links a { display: inline-block; margin-right: 10px; padding: 6px 12px; border-radius: 999px; background: #eef3ff; border: 1px solid #dfe7ff; font-weight: 600; font-size: 14px; transition: 0.3s; }
+    .links a:hover { background: #2947d3; color: #fff; }
+    main { max-width: var(--maxw); margin: 20px auto; padding: 0 16px 60px; }
     h2 { margin: 24px 0 12px; font-size: clamp(18px, 3.2vw, 24px); }
-
-    .bio {
-      background: #fff;
-      border: 1px solid #eef1f5;
-      border-radius: 14px;
-      padding: 20px 24px;
-      margin-bottom: 8px;
-    }
-
-    .bio p {
-      margin: 0 0 10px;
-      font-size: 15px;
-      line-height: 1.75;
-      color: var(--muted);
-    }
-
+    .bio { background: #fff; border: 1px solid #eef1f5; border-radius: 14px; padding: 20px 24px; margin-bottom: 8px; }
+    .bio p { margin: 0 0 10px; font-size: 15px; line-height: 1.75; color: var(--muted); }
     .bio p:last-child { margin-bottom: 0; }
-
-    .grid {
-      display: grid;
-      gap: 16px;
-      grid-template-columns: 1fr;
-      align-items: stretch;
-    }
-
-    @media (min-width: 880px) {
-      .grid { grid-template-columns: 1fr 1fr; }
-    }
-
-    .card {
-      background: #fff;
-      border: 1px solid #eef1f5;
-      border-radius: 14px;
-      padding: 14px;
-      display: flex;
-      flex-direction: column;
-    }
-
+    .grid { display: grid; gap: 16px; grid-template-columns: 1fr; align-items: stretch; }
+    @media (min-width: 880px) { .grid { grid-template-columns: 1fr 1fr; } }
+    .card { background: #fff; border: 1px solid #eef1f5; border-radius: 14px; padding: 14px; display: flex; flex-direction: column; }
     .card h3 { margin: 6px 6px 4px; font-size: 18px; }
-
-    .card .lang-note {
-      font-size: 12px;
-      color: var(--muted);
-      margin: 0 6px 12px;
-    }
-
-    .card p {
-      margin: 0 6px 12px;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    tableau-viz {
-      display: block;
-      width: 100%;
-      flex: 1;
-      min-height: 600px;
-      border: 1px solid #eef1f5;
-      border-radius: 10px;
-      overflow: hidden;
-    }
-
-    .badge-powerbi {
-      display: inline-block;
-      background: #f2c811;
-      color: #000;
-      padding: 2px 8px;
-      border-radius: 4px;
-      font-size: 10px;
-      font-weight: bold;
-      margin-bottom: 8px;
-      align-self: flex-start;
-    }
-
-    .badge-tableau {
-      display: inline-block;
-      background: #1f77b4;
-      color: #fff;
-      padding: 2px 8px;
-      border-radius: 4px;
-      font-size: 10px;
-      font-weight: bold;
-      margin-bottom: 8px;
-      align-self: flex-start;
-    }
-
-    .badge-sheets {
-      display: inline-block;
-      background: #34a853;
-      color: #fff;
-      padding: 2px 8px;
-      border-radius: 4px;
-      font-size: 10px;
-      font-weight: bold;
-      margin-bottom: 8px;
-      align-self: flex-start;
-    }
-
-    footer {
-      border-top: 1px solid #eef1f5;
-      background: #fff;
-    }
-
-    footer .wrap {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      justify-content: space-between;
-      align-items: center;
-    }
-
+    .card .lang-note { font-size: 12px; color: var(--muted); margin: 0 6px 12px; }
+    .card p { margin: 0 6px 12px; color: var(--muted); font-size: 14px; }
+    tableau-viz { display: block; width: 100%; flex: 1; min-height: 600px; border: 1px solid #eef1f5; border-radius: 10px; overflow: hidden; }
+    .badge-powerbi { display: inline-block; background: #f2c811; color: #000; padding: 2px 8px; border-radius: 4px; font-size: 10px; font-weight: bold; margin-bottom: 8px; align-self: flex-start; }
+    .badge-tableau { display: inline-block; background: #1f77b4; color: #fff; padding: 2px 8px; border-radius: 4px; font-size: 10px; font-weight: bold; margin-bottom: 8px; align-self: flex-start; }
+    .badge-sheets { display: inline-block; background: #34a853; color: #fff; padding: 2px 8px; border-radius: 4px; font-size: 10px; font-weight: bold; margin-bottom: 8px; align-self: flex-start; }
+    footer { border-top: 1px solid #eef1f5; background: #fff; }
+    footer .wrap { display: flex; flex-wrap: wrap; gap: 8px; justify-content: space-between; align-items: center; }
     footer small { color: var(--muted); }
   </style>
 </head>
-
 <body>
   <header>
     <div class="wrap hero">
@@ -248,7 +86,7 @@
       </p>
       <p>
         Holding an MBA, a Master's in Project Management, and currently completing a
-        Bootcamp in Data Analytics (Neoland, 2026). 
+        Bootcamp in Data Analytics (Neoland, 2026).
       </p>
       <p>
         Certified in <a href="https://www.credly.com/badges/c3e12f20-d163-45ab-91c8-0c0f9d5550cc" target="_blank">Microsoft Azure Data Fundamentals (DP-900)</a> and PMI Project Management Ready™.
@@ -258,33 +96,6 @@
     <section>
       <h2>Featured Projects</h2>
 
-      <div class="grid">
-        <article class="card">
-          <div class="badge-tableau">TABLEAU</div>
-          <h3>Netflix KPIs Dashboard</h3>
-          <p>Key performance indicators and insights on content performance and category trends.</p>
-          <tableau-viz
-            src="https://public.tableau.com/views/Netflix_17702282617750/Dashboard?:showVizHome=no"
-            toolbar="bottom"
-            hide-tabs>
-          </tableau-viz>
-        </article>
-
-        <article class="card">
-          <div class="badge-tableau">TABLEAU</div>
-          <h3>Employee Analytics Dashboard</h3>
-          <p class="lang-note">Dashboard in Spanish</p>
-          <p>HR metrics, workforce distribution, and interactive filters for organizational insights.</p>
-          <tableau-viz
-            src="https://public.tableau.com/views/Empleados_17702317612790/Dashboard1?:showVizHome=no"
-            toolbar="bottom"
-            hide-tabs>
-          </tableau-viz>
-        </article>
-      </div>
-    </section>
-
-    <section style="margin-top: 16px;">
       <div class="grid">
         <article class="card">
           <div class="badge-powerbi">POWER BI</div>
@@ -309,6 +120,33 @@
           <p style="margin-top: 12px; font-size: 14px;">
             <a href="https://github.com/jesuspenae/global-sales-analysis" target="_blank">📂 View Project & Source Files →</a>
           </p>
+        </article>
+      </div>
+    </section>
+
+    <section style="margin-top: 16px;">
+      <div class="grid">
+        <article class="card">
+          <div class="badge-tableau">TABLEAU</div>
+          <h3>Netflix KPIs Dashboard</h3>
+          <p>Key performance indicators and insights on content performance and category trends.</p>
+          <tableau-viz
+            src="https://public.tableau.com/views/Netflix_17702282617750/Dashboard?:showVizHome=no"
+            toolbar="bottom"
+            hide-tabs>
+          </tableau-viz>
+        </article>
+
+        <article class="card">
+          <div class="badge-tableau">TABLEAU</div>
+          <h3>Employee Analytics Dashboard</h3>
+          <p class="lang-note">Dashboard in Spanish</p>
+          <p>HR metrics, workforce distribution, and interactive filters for organizational insights.</p>
+          <tableau-viz
+            src="https://public.tableau.com/views/Empleados_17702317612790/Dashboard1?:showVizHome=no"
+            toolbar="bottom"
+            hide-tabs>
+          </tableau-viz>
         </article>
       </div>
     </section>
