@@ -51,14 +51,18 @@
     .grid { display: grid; gap: 16px; grid-template-columns: 1fr; align-items: stretch; }
     @media (min-width: 880px) { .grid { grid-template-columns: 1fr 1fr; } }
     .card { background: #fff; border: 1px solid #eef1f5; border-radius: 14px; padding: 14px; display: flex; flex-direction: column; }
+    .card-featured { background: #fff; border: 2px solid #2947d3; border-radius: 14px; padding: 14px; display: flex; flex-direction: column; margin-bottom: 16px; }
     .card h3 { margin: 6px 6px 4px; font-size: 18px; }
+    .card-featured h3 { margin: 6px 6px 4px; font-size: 20px; }
     .card .lang-note { font-size: 12px; color: var(--muted); margin: 0 6px 12px; }
-    .card p { margin: 0 6px 12px; color: var(--muted); font-size: 14px; }
+    .card p, .card-featured p { margin: 0 6px 12px; color: var(--muted); font-size: 14px; }
+    .featured-placeholder { width: 100%; min-height: 220px; background: #eef3ff; border-radius: 10px; border: 1px dashed #2947d3; display: flex; align-items: center; justify-content: center; color: #2947d3; font-size: 14px; font-weight: 600; }
     tableau-viz { display: block; width: 100%; flex: 1; min-height: 600px; border: 1px solid #eef1f5; border-radius: 10px; overflow: hidden; }
     .badge-powerbi { display: inline-block; background: #f2c811; color: #000; padding: 2px 8px; border-radius: 4px; font-size: 10px; font-weight: bold; margin-bottom: 8px; align-self: flex-start; }
     .badge-tableau { display: inline-block; background: #E8762D; color: #fff; padding: 2px 8px; border-radius: 4px; font-size: 10px; font-weight: bold; margin-bottom: 8px; align-self: flex-start; }
     .badge-sheets { display: inline-block; background: #34a853; color: #fff; padding: 2px 8px; border-radius: 4px; font-size: 10px; font-weight: bold; margin-bottom: 8px; align-self: flex-start; }
     .badge-python { display: inline-block; background: #3776ab; color: #fff; padding: 2px 8px; border-radius: 4px; font-size: 10px; font-weight: bold; margin-bottom: 8px; align-self: flex-start; }
+    .badge-ml { display: inline-block; background: #1a3a5c; color: #fff; padding: 2px 8px; border-radius: 4px; font-size: 10px; font-weight: bold; margin-bottom: 8px; align-self: flex-start; margin-left: 4px; }
     footer { border-top: 1px solid #eef1f5; background: #fff; }
     footer .wrap { display: flex; flex-wrap: wrap; gap: 8px; justify-content: space-between; align-items: center; }
     footer small { color: var(--muted); }
@@ -97,6 +101,23 @@
     <section>
       <h2>Featured Projects</h2>
 
+      <!-- AIRBNB — FEATURED PROJECT (full width) -->
+      <article class="card-featured">
+        <div>
+          <span class="badge-powerbi">POWER BI</span>
+          <span class="badge-python">PYTHON</span>
+          <span class="badge-ml">XGBoost ML</span>
+        </div>
+        <h3>Airbnb Europe: Strategic Market Analysis</h3>
+        <p>End-to-end project analyzing 51,571 Airbnb listings across 10 European cities — data cleaning, EDA, and an XGBoost regression model (R² 0.737, MAE ±15.20 €/night) deployed in a 5-page Power BI interactive dashboard.</p>
+        <!-- Replace the div below with an <img> tag once you have the dashboard screenshot -->
+        <div class="featured-placeholder">📸 Dashboard screenshot coming soon</div>
+        <p style="margin-top: 12px; font-size: 14px;">
+          <a href="https://github.com/jesuspenae/airbnb-europe-pricing-analysis" target="_blank">📂 View Project & Source Files →</a>
+        </p>
+      </article>
+
+      <!-- ROW 1 -->
       <div class="grid">
         <article class="card">
           <div class="badge-powerbi">POWER BI</div>
@@ -125,6 +146,7 @@
       </div>
     </section>
 
+    <!-- ROW 2 -->
     <section style="margin-top: 16px;">
       <div class="grid">
         <article class="card">
